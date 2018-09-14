@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="authordetector.DetectorDocumentController">
+   <children>
+      <ImageView fitHeight="673.0" fitWidth="1054.0" layoutX="-71.0" layoutY="-59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../best-books-book-youll-ever-read.jpg" />
+         </image></ImageView>
+      <TextArea fx:id="dbShower" layoutX="80.0" layoutY="98.0" prefHeight="200.0" prefWidth="294.0" />
+      <TextArea fx:id="sigDisplay" layoutX="80.0" layoutY="354.0" prefHeight="200.0" prefWidth="294.0" wrapText="true" />
+      <TextArea fx:id="book" layoutX="562.0" layoutY="98.0" prefHeight="279.0" prefWidth="334.0" />
+      <TextField fx:id="writer" layoutX="632.0" layoutY="65.0" promptText="name" />
+      <Button fx:id="authorSetter" layoutX="792.0" layoutY="65.0" mnemonicParsing="false" onAction="#setAuthor" prefHeight="25.0" prefWidth="73.0" text="Set Author" />
+      <Label layoutX="559.0" layoutY="64.0" text="Author:" textFill="#f900ff">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="dbLoader" layoutX="81.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadSigs" text="Load DB" />
+      <Button fx:id="bookAnalyzer" layoutX="469.0" layoutY="306.0" mnemonicParsing="false" onAction="#readBook" text="Analyze Book" />
+      <Button fx:id="mystery" layoutX="399.0" layoutY="346.0" mnemonicParsing="false" onAction="#solveMyth" text="Determine Mystery Author" />
+      <Button fx:id="sigSaver" layoutX="259.0" layoutY="301.0" mnemonicParsing="false" onAction="#saveSigs" text="Save Signature File" />
+      <Button fx:id="sigDisplayer" layoutX="80.0" layoutY="301.0" mnemonicParsing="false" onAction="#showSigs" text="Display Signatures" />
+      <Label layoutX="563.0" layoutY="387.0" text="Avg Word Length:" textFill="#d2ff00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="564.0" layoutY="517.0" text="Sentence Complexity:" textFill="#eeff00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="563.0" layoutY="484.0" text="Words per Sentence:" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="563.0" layoutY="451.0" text="Hapax Ratio:" textFill="#1aff00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="563.0" layoutY="418.0" text="Type Token:" textFill="#00feff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="avgWordLength" layoutX="693.0" layoutY="389.0" prefHeight="17.0" prefWidth="116.0" textFill="LIME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="hapaxRatio" layoutX="659.0" layoutY="452.0" prefHeight="17.0" prefWidth="116.0" textFill="LIME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeToken" layoutX="652.0" layoutY="419.0" prefHeight="17.0" prefWidth="116.0" textFill="LIME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="wordsPerSentence" layoutX="708.0" layoutY="486.0" prefHeight="17.0" prefWidth="116.0" textFill="LIME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sentenceComplexity" layoutX="717.0" layoutY="518.0" prefHeight="17.0" prefWidth="116.0" textFill="LIME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="-1.0" text="Author Detector" textFill="#0b00ff">
+         <font>
+            <Font name="Gabriola" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="552.0" text="Punctuation Frequency:" textFill="#0014ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="punctFreq" layoutX="731.0" layoutY="552.0" prefHeight="20.0" prefWidth="106.0" textFill="#00ff11">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="331.0" text="Books in Library" textFill="#3c00ff">
+         <font>
+            <Font name="Constantia Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
